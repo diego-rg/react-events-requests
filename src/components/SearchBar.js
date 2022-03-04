@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
               className="search-bar__input"
               type="text"
               onChange={this.onInputChange}//Usando this.onInputChange() executaríase ao renderizar. O que queremos é que o faga cando o user fai input
+              //Sintaxis alternativa con arrow: onChange={(event) => console.log(event.target.value)}.
             />
           </div>
         </form>
