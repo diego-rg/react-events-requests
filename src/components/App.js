@@ -1,6 +1,7 @@
 import React from "react";
 import unsplash from "../api/unsplash";
 import SearchBar from "./SearchBar";
+import ImageList from "./ImageList";
 
 //Refactor a compoñente de clase para pasar o query do compoñente SearchBar a App (de fillo a pai)
 //A api de unsplash require rexistro e clave. Axios devolve unha promise
@@ -20,7 +21,7 @@ class App extends React.Component {
     return (
       <div className="ui container app-container">
         <SearchBar onSubmitQuery={this.onSearchSubmit} />
-        Resultados: {this.state.images.length} imágenes
+        <ImageList images={this.state.images}/>
       </div>
     );
   }
